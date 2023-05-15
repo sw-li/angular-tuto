@@ -7,17 +7,20 @@ import { HousingLocation } from '../housinglocation';
   standalone: true,
   imports: [CommonModule, HousingLocationComponent],
   template: `
-  <section>
-    <form>
-      <input type="text" placeholder="Filter by city">
-      <button class="primary" type="button">Search</button>
-    </form>
-  </section>
-  <section class="results">
-    <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"></app-housing-location>
-  </section>
+    <section>
+      <form>
+        <input type="text" placeholder="Filter by city" />
+        <button class="primary" type="button">Search</button>
+      </form>
+    </section>
+    <section class="results">
+      <app-housing-location
+        *ngFor="let housingLocation of housingLocationList"
+        [housingLocation]="housingLocation"
+      ></app-housing-location>
+    </section>
   `,
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   housingLocationList: HousingLocation[] = [
@@ -29,7 +32,7 @@ export class HomeComponent {
       photo: '/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg',
       availableUnits: 4,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 1,
@@ -39,7 +42,7 @@ export class HomeComponent {
       photo: '/assets/brandon-griggs-wR11KBaB86U-unsplash.jpg',
       availableUnits: 0,
       wifi: false,
-      laundry: true
+      laundry: true,
     },
     {
       id: 2,
@@ -49,7 +52,7 @@ export class HomeComponent {
       photo: '/assets/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg',
       availableUnits: 1,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 3,
@@ -59,7 +62,7 @@ export class HomeComponent {
       photo: '/assets/ian-macdonald-W8z6aiwfi1E-unsplash.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 4,
@@ -69,7 +72,7 @@ export class HomeComponent {
       photo: '/assets/krzysztof-hepner-978RAXoXnH4-unsplash.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 5,
@@ -79,7 +82,7 @@ export class HomeComponent {
       photo: '/assets/r-architecture-JvQ0Q5IkeMM-unsplash.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 6,
@@ -89,7 +92,7 @@ export class HomeComponent {
       photo: '/assets/phil-hearing-IYfp2Ixe9nM-unsplash.jpg',
       availableUnits: 5,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 7,
@@ -99,7 +102,7 @@ export class HomeComponent {
       photo: '/assets/r-architecture-GGupkreKwxA-unsplash.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 8,
@@ -109,7 +112,7 @@ export class HomeComponent {
       photo: '/assets/saru-robert-9rP3mxf8qWI-unsplash.jpg',
       availableUnits: 10,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 9,
@@ -119,7 +122,7 @@ export class HomeComponent {
       photo: '/assets/webaliser-_TPTXZd9mOo-unsplash.jpg',
       availableUnits: 6,
       wifi: true,
-      laundry: true
-    }
+      laundry: true,
+    },
   ];
 }
